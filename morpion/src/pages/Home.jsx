@@ -1,11 +1,12 @@
 function Home() {
 return(
     <>
-        <h1>Jeu du <c1>Morpion</c1></h1>
-        <h2>Choix du mode de jeu</h2>
+        <h1>Tic Tac <c1>Toe</c1></h1>
+        <h2>Gameplay mode</h2>
         <div className="select">
-            <a href="">Morpion classique</a>
-            <a href="">Morpion en trois coups</a>
+            <a href="">Classic tic-tac-toe</a>
+            <a href="">Three moves tic-tac-toe</a>
+            <a href="">Return to ongoing game</a>
         </div>
     </>
 )

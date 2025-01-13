@@ -17,6 +17,8 @@
   --font2: "Poppins", serif;
 
   --radius: 5px;
+
+  --tshad: 2px 4px 0 var(--shadg2);
 }
 
 #root {
@@ -60,7 +62,7 @@ header a{
   padding: 3px 10px;
   border-radius: var(--radius);
   color: var(--mainc2);
-  box-shadow: 2px 4px 0 var(--shadg2);
+  box-shadow: var(--tshad);
   transition: 0.5s;
 }
 
@@ -91,6 +93,7 @@ main {
   padding: 10px;
   flex: 0;
   flex-shrink: 0;
+  color: var(--shadg1);
 }
 
 /* HOMEPAGE */
@@ -113,7 +116,7 @@ main {
   text-transform: uppercase;
   color: var(--white);
   border-radius: var(--radius);
-  box-shadow: 2px 4px 0 var(--shadg2);
+  box-shadow: var(--tshad);
   transition: 0.5s;
 }
 
@@ -121,4 +124,130 @@ main {
   background: var(--bg1);
   box-shadow: 2px 4px 0 var(--mainc1);
   transition: 0.5s;
+}
+
+/* RANKING */
+
+.score-table{
+  width: 40%;
+  background-color: var(--grey3);
+  margin: auto;
+  padding: 10px;
+  border-radius: var(--radius);
+  margin-bottom: 50px;
+}
+
+.score-disp tr{
+  text-align: center;
+  margin: 10px;
+}
+
+.ranking{
+  font-family: var(--font2);
+  color: var(--mainc1);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.name-rank{
+  background-color: var(--grey1);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  color: var(--grey3);
+  width: fit-content;
+  margin: auto;
+}
+
+/* GAME */
+
+.container{
+  width: 30%;
+  background-color: var(--grey3);
+  border-radius: var(--radius);
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.gameboard{
+  width: 100%;
+}
+
+.gameboard td{
+  width: calc(100%/3);
+}
+
+.case{
+  align-self: center;
+  background-color: var(--grey2);
+  padding: 10px;
+  border-radius: var(--radius);
+  box-shadow: var(--tshad);
+  color: var(--grey3);
+}
+
+.bg1{
+  background-color: var(--mainc1);
+}
+
+.bg2{
+  background-color: var(--grey1);
+}
+
+.bg3{
+  background: var(--mainc2);
+}
+
+score{
+  font-family: var(--font2);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+player{
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.turn{
+  background-color: var(--grey2);
+  border-radius: var(--radius);
+  padding: 5px;
+  text-transform: uppercase;
+  color: var(--grey1);
+  box-shadow: var(--tshad);
+  align-items: center;
+}
+
+.refreshing{
+  text-align: right;
+}
+
+.refresh{
+  background-color: var(--grey1);
+  box-shadow: 2px 4px var(--shadg1);
+  padding: 5px;
+  border-radius: var(--radius);
+  color: var(--grey3);
+}
+
+button{
+  border: 0;
+}
+
+button:hover{
+  border: 0;
+}
+
+.logos{
+  text-align: left;
+}
+
+.logoexample{
+  width: 14px;
+  color: var(--grey1);
+}
+
+.played{
+  width: 30px;
 }
