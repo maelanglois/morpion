@@ -1,4 +1,5 @@
-export default function Game() {
+function Game() {
 
 }
 
+export default Game;

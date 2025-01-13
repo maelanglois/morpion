@@ -1,3 +1,5 @@
-export default function Ranking() {
-    
+function Ranking() {
+
 }
+
+export default Ranking;
