@@ -184,6 +184,12 @@ main {
   border-radius: var(--radius);
   box-shadow: var(--tshad);
   color: var(--grey3);
+  width: 100%;
+  min-height: 54px;
+}
+
+button:focus{
+  outline: 0;
 }
 
 .bg1{
