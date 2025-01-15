@@ -8,7 +8,6 @@ function Menu() {
             <header>
                 <Link to="/">Home</Link>
                 <Link to="/ranking">Ranking</Link>
-                <Link to="/game">Game</Link>
             </header>
         </>
     )

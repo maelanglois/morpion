@@ -1,6 +1,7 @@
 import './App.css'
 import Footer from '../../pages/Footer'
 import Menu from '../../pages/Menu'
+import Three from '../../pages/Three'
 
 import { Route, Routes } from 'react-router'
 
@@ -18,6 +19,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/ranking" element={<Ranking />} />
               <Route path="/game" element={<Game />} />
+              <Route path="/three" element={<Three />} />
           </Routes>
         </main>
       <Footer />

@@ -265,3 +265,45 @@ button:hover{
   padding: 10px;
   border-radius: var(--radius);
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1200px) {
+  .score-table{
+    min-width: 50%;
+  }
+
+  .container{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .select a{
+    min-width: 50%;
+  }
+
+  .score-table{
+    min-width: 70%;
+  }
+
+  .container{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .select a{
+    min-width: 70%;
+  }
+
+  .container{
+    width: 90%;
+  }
+}
