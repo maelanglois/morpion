@@ -257,3 +257,11 @@ button:hover{
 .played{
   width: 30px;
 }
+
+.winner{
+  width: 30%;
+  margin: auto;
+  background-color: var(--grey3);
+  padding: 10px;
+  border-radius: var(--radius);
+}
