@@ -163,7 +163,6 @@ function Gameboard() {
                 </tr>
             </table>
         </div>
-        <div className='winner'>test</div>
     </>
     )
 }

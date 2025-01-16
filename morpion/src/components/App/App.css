@@ -72,6 +72,14 @@ header a:hover{
   transition: 0.5s;
 }
 
+a{
+  color: var(--white);
+}
+
+a:hover{
+  color: var(--white);
+}
+
 /* HOME */
 
 h1 {
@@ -264,6 +272,51 @@ button:hover{
   background-color: var(--grey3);
   padding: 10px;
   border-radius: var(--radius);
+}
+
+/* UTILISATEUR */
+
+form{
+  width: 50%;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  background: var(--grey3);
+  padding: 20px;
+}
+
+label{
+  text-align: left;
+  font-size: 18px;
+}
+
+input{
+  border: 0;
+  background-color: var(--grey1);
+  padding: 10px;
+  border-radius: var(--radius);
+  color: var(--grey3);
+}
+
+input:focus{
+  border: 0;
+  outline: 0;
+}
+
+form button{
+  width: fit-content;
+  margin: auto;
+  background-color: var(--grey2);
+  margin-top: 20px;
+  box-shadow: 2px 4px var(--mainc1);
+  transition: 0.5s;
+}
+
+form button:hover{
+  box-shadow: 2px 4px var(--mainc2);
+  transition: 0.5s;
 }
 
 /* RESPONSIVE */

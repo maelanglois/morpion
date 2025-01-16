@@ -2,6 +2,7 @@ import './App.css'
 import Footer from '../../pages/Footer'
 import Menu from '../../pages/Menu'
 import Three from '../../pages/Three'
+import NewUser from '../../pages/NewUser'
 
 import { Route, Routes } from 'react-router'
 
@@ -20,6 +21,7 @@ function App() {
               <Route path="/ranking" element={<Ranking />} />
               <Route path="/game" element={<Game />} />
               <Route path="/three" element={<Three />} />
+              <Route path="/login" element={<NewUser />} />
           </Routes>
         </main>
       <Footer />
