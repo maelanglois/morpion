@@ -7,7 +7,7 @@ function Home() {
             <h2>Gameplay mode</h2>
             <div className="select">
                 <Link to="/login">Classic tic-tac-toe</Link>
-                <Link to="/login">Three moves tic-tac-toe</Link>
+                <Link to="/loginbot">Classic against bot</Link>
                 <a href="">Return to ongoing game</a>
             </div>
         </>

@@ -25,7 +25,7 @@ function Square({ value, squareClick }) {
     }
 }
 
-function Three() {
+function Botgame() {
     const [xNext, setXNext] = useState(true);
     const [square, setSquare] = useState(Array(9).fill(null));
     const [player1, setPlayer1] = useState(0);
@@ -199,4 +199,4 @@ function Winner(squares) {
     return null;
 }
 
-export default Three;
+export default Botgame;

@@ -1,6 +1,3 @@
-import { useState } from "react";
-import User from "../components/models/User";
-
 function Ranking() {
 
     return (
@@ -10,19 +7,19 @@ function Ranking() {
                 <tr>
                     <td>
                         <div className="ranking">#01</div>
-                        <User />
+                        <div className="name-rank"></div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div className="ranking">#02</div>
-                        <div className="name-rank">{players[0]}</div>
+                        <div className="name-rank"></div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div className="ranking">#03</div>
-                        <div className="name-rank">{players[2]}</div>
+                        <div className="name-rank"></div>
                     </td>
                 </tr>
                 <tr>
