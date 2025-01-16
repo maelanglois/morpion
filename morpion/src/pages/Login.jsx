@@ -8,7 +8,7 @@ function User(){
     const navigate = useNavigate();
 
     useEffect(() => {
-        localStorage.setItem('user', user);
+        localStorage.setItem('user', JSON.stringify(user));
     }, [user]);
 
     function setPlayer(u) {

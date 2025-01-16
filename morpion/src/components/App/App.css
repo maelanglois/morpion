@@ -266,12 +266,20 @@ button:hover{
   width: 30px;
 }
 
-.winner{
-  width: 30%;
+.quit{
+  width: fit-content;
   margin: auto;
   background-color: var(--grey3);
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: var(--radius);
+  box-shadow: 2px 2px var(--mainc1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.quit:hover{
+  box-shadow: 2px 2px var(--mainc2);
+  transition: 0.5s;
 }
 
 /* UTILISATEUR */

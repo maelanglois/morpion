@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router'
 
 import cross from '../components/img/cross.svg'
 import circle from '../components/img/circle.svg'
@@ -163,6 +164,7 @@ function Gameboard() {
                 </tr>
             </table>
         </div>
+        <Link to="/" className="quit">Quit</Link>
     </>
     )
 }

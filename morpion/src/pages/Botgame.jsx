@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 
 import cross from '../components/img/cross.svg';
 import circle from '../components/img/circle.svg';
@@ -113,69 +114,72 @@ function Botgame() {
     }
 
     return (
-        <div className="container">
-            <table className="gameboard" cellSpacing={20}>
-                <tr>
-                    <td className="logos">
-                        <img src={cross} className="logoexample" />{' '}
-                        <img src={circle} className="logoexample" />
-                    </td>
-                    <td className="turn">{status} {turn}</td>
-                    <td className="refreshing">
-                        <button className="refresh material-symbols-outlined" onClick={vide}>
-                            refresh
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <Square value={square[0]} squareClick={() => click(0)} />
-                    </td>
-                    <td>
-                        <Square value={square[1]} squareClick={() => click(1)} />
-                    </td>
-                    <td>
-                        <Square value={square[2]} squareClick={() => click(2)} />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <Square value={square[3]} squareClick={() => click(3)} />
-                    </td>
-                    <td>
-                        <Square value={square[4]} squareClick={() => click(4)} />
-                    </td>
-                    <td>
-                        <Square value={square[5]} squareClick={() => click(5)} />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <Square value={square[6]} squareClick={() => click(6)} />
-                    </td>
-                    <td>
-                        <Square value={square[7]} squareClick={() => click(7)} />
-                    </td>
-                    <td>
-                        <Square value={square[8]} squareClick={() => click(8)} />
-                    </td>
-                </tr>
-                <tr>
-                    <td className="case bg1">
-                        <player>x (P1)</player><br />
-                        <score>{player1}</score>
-                    </td>
-                    <td className="case bg2">
-                        <player>tie</player><br />
-                        <score>{tie}</score>
-                    </td>
-                    <td className="case bg3">
-                        <player>o (BOT)</player><br />
-                        <score>{player2}</score>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <>
+            <div className="container">
+                <table className="gameboard" cellSpacing={20}>
+                    <tr>
+                        <td className="logos">
+                            <img src={cross} className="logoexample" />{' '}
+                            <img src={circle} className="logoexample" />
+                        </td>
+                        <td className="turn">{status} {turn}</td>
+                        <td className="refreshing">
+                            <button className="refresh material-symbols-outlined" onClick={vide}>
+                                refresh
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Square value={square[0]} squareClick={() => click(0)} />
+                        </td>
+                        <td>
+                            <Square value={square[1]} squareClick={() => click(1)} />
+                        </td>
+                        <td>
+                            <Square value={square[2]} squareClick={() => click(2)} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Square value={square[3]} squareClick={() => click(3)} />
+                        </td>
+                        <td>
+                            <Square value={square[4]} squareClick={() => click(4)} />
+                        </td>
+                        <td>
+                            <Square value={square[5]} squareClick={() => click(5)} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Square value={square[6]} squareClick={() => click(6)} />
+                        </td>
+                        <td>
+                            <Square value={square[7]} squareClick={() => click(7)} />
+                        </td>
+                        <td>
+                            <Square value={square[8]} squareClick={() => click(8)} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="case bg1">
+                            <player>x (P1)</player><br />
+                            <score>{player1}</score>
+                        </td>
+                        <td className="case bg2">
+                            <player>tie</player><br />
+                            <score>{tie}</score>
+                        </td>
+                        <td className="case bg3">
+                            <player>o (BOT)</player><br />
+                            <score>{player2}</score>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <Link to="/" className="quit">Quit</Link>
+        </>
     );
 }
 
