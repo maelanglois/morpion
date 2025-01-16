@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 
 import cross from '../components/img/cross.svg'
@@ -39,6 +39,7 @@ function Gameboard() {
     const [player1, setPlayer1] = useState(0);
     const [player2, setPlayer2] = useState(0);
     const [tie, setTie] = useState(0);
+    const [user, setUser] = useState(localStorage.getItem('user')?JSON.parse(localStorage.getItem('user')): null );
 
     function click(i) {
         if(square[i] || Winner(square)) {
@@ -150,7 +151,7 @@ function Gameboard() {
                 </tr>
                 <tr>
                     <td className="case bg1">
-                        <player>x (P1)</player><br></br>
+                        <player>x ({user[0]})</player><br></br>
                         <score>{player1}</score>
                     </td>
                     <td className="case bg2">
@@ -158,7 +159,7 @@ function Gameboard() {
                         <score>{tie}</score>
                     </td>
                     <td className="case bg3">
-                        <player>o (P2)</player><br></br>
+                        <player>o ({user[1]})</player><br></br>
                         <score>{player2}</score>
                     </td>
                 </tr>

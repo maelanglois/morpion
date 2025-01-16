@@ -32,6 +32,7 @@ function Botgame() {
     const [player1, setPlayer1] = useState(0);
     const [player2, setPlayer2] = useState(0);
     const [tie, setTie] = useState(0);
+    const [user, setUser] = useState(localStorage.getItem('user')?JSON.parse(localStorage.getItem('user')): null)
 
     function click(i) {
         if (square[i] || Winner(square)) {
@@ -164,7 +165,7 @@ function Botgame() {
                     </tr>
                     <tr>
                         <td className="case bg1">
-                            <player>x (P1)</player><br />
+                            <player>x ({user[0]})</player><br />
                             <score>{player1}</score>
                         </td>
                         <td className="case bg2">
