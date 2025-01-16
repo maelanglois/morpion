@@ -103,6 +103,14 @@ function Gameboard() {
         })
     }
 
+    if(!user[0]) {
+        user[0] = 'P1';
+    }
+
+    if(!(user[1])) {
+        user[1] = 'P2';
+    }
+
     return (
         <>
             <div className="container">

@@ -269,7 +269,7 @@ button:hover{
 .quit{
   width: fit-content;
   margin: auto;
-  background-color: var(--grey3);
+  background-color: var(--bg1);
   padding: 10px 20px;
   border-radius: var(--radius);
   box-shadow: 2px 2px var(--mainc1);
@@ -278,6 +278,7 @@ button:hover{
 }
 
 .quit:hover{
+  background-color: var(--grey3);
   box-shadow: 2px 2px var(--mainc2);
   transition: 0.5s;
 }
@@ -323,6 +324,7 @@ form button{
 }
 
 form button:hover{
+  background-color: var(--bg1);
   box-shadow: 2px 4px var(--mainc2);
   transition: 0.5s;
 }

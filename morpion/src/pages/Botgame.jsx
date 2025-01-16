@@ -33,6 +33,7 @@ function Botgame() {
     const [player2, setPlayer2] = useState(0);
     const [tie, setTie] = useState(0);
     const [user, setUser] = useState(localStorage.getItem('user')?JSON.parse(localStorage.getItem('user')): null)
+    const [score, setScore] = useState(0);
 
     function click(i) {
         if (square[i] || Winner(square)) {
@@ -51,6 +52,10 @@ function Botgame() {
             bot(square);
         }
     }, [xNext, square]); // ici, je vérifie que si xNext est false, c'est au tour du bot de jouer
+
+    useEffect(() => {
+        localStorage.setItem('score', JSON.stringify(score));
+    }, [score]);
 
     function bot(next) {
         const empty = next
