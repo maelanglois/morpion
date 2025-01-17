@@ -82,7 +82,9 @@ function Botgame() {
     let turn = "turn";
     let P1 = player1;
     let P2 = player2;
+    let T = tie;
     const winner = Winner(square);
+
     if (winner === 'O') {
         status = "Winner : ";
         turn = <img src={circle} className="logoexample" />;
@@ -91,20 +93,34 @@ function Botgame() {
         status = "Winner : ";
         turn = <img src={cross} className="logoexample" />;
         P1++;
+        updateScore(user[0], 'wins');
+    } else if(full(square)) {
+        status = "Tie";
+        T++;
+        updateScore(user[0], 'ties');
+        setTimeout(() => {
+            setTie(T);
+            vide();
+        }, 2000);
     } else {
         status = xNext ? (
             <img src={cross} className="logoexample" />
         ) : (
             <img src={circle} className="logoexample" />
         );
+    }
 
-        if (full(square)) {
-            const newTie = tie + 1;
-            setTimeout(() => {
-                setTie(newTie);
-                vide();
-            }, 2000);
-        }
+    function updateScore(player, type) {
+        const userScores = JSON.parse(localStorage.getItem('scores'));
+        if(player) {
+            if(type == 'wins') {
+                userScores[player][type] = P1;
+            } else {
+                console.log(type);
+                userScores[player][type] = T;
+            }
+        } 
+        localStorage.setItem('scores', JSON.stringify(userScores));
     }
 
     if (winner) {

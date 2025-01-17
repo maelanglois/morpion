@@ -13,7 +13,14 @@ function Player(){
     function setPlayer(u) {
         u.preventDefault();
         const player1 = document.querySelector('#player1').value;
+
         if(player1 != '') {
+            const userScores = JSON.parse(localStorage.getItem('scores'));
+            if(!userScores[player1]) {
+                userScores[player1] = {wins: 0, ties: 0};
+            }
+            localStorage.setItem('scores', JSON.stringify(userScores));
+
             setUser([player1])
         }
         navigate('/botgame');
