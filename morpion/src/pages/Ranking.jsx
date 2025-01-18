@@ -1,44 +1,34 @@
+import { useState, useEffect } from 'react';
+
 function Ranking() {
+    const [scores, setScores] = useState([]);
+
+    useEffect(() => {
+        const store = JSON.parse(localStorage.getItem('scores'));
+        const sort = Object.entries(store)
+            .map(([player, data]) => ({ player, ...data }))
+            .sort((a, b) => b.wins - a.wins);
+        setScores(sort);
+    }, []);
 
     return (
         <>
-            <h1><c1>Top 5</c1> ranking</h1>
+            <h1><c1>Global</c1> ranking</h1>
             <table className="score-table" cellSpacing={20}>
-                <tr>
-                    <td>
-                        <div className="ranking">#01</div>
-                        <div className="name-rank"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div className="ranking">#02</div>
-                        <div className="name-rank"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div className="ranking">#03</div>
-                        <div className="name-rank"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div className="ranking">#04</div>
-                        <div className="name-rank"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div className="ranking">#05</div>
-                        <div className="name-rank"></div>
-                    </td>
-                </tr>
+                {scores.map((score, index) => (
+                    <tr key={index}>
+                        <td>
+                            <div className="ranking">#{index + 1}</div>
+                            <div className="name-rank">{score.player}</div>
+                            <div className="score-details">
+                                Wins: {score.wins} | Ties: {score.ties}
+                            </div>
+                        </td>
+                    </tr>
+                ))}
             </table>
         </>
-    )
+    );
 }
-
-// const players = ["pseudo", "pseudonyme", "utilisateur"]
 
 export default Ranking;

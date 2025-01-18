@@ -8,6 +8,8 @@
   --grey1: #B6CAD3;
   --grey2: #284551;
   --grey3: #203741;
+  --grey4: #243e49;
+  --grey5: #97abb4;
   --bg1: #1e333c;
   --shadg1: #7D9AA7;
   --shadg2: #132C36;
@@ -194,6 +196,12 @@ main {
   color: var(--grey3);
   width: 100%;
   min-height: 54px;
+  transition: 0.5s;
+}
+
+.case:hover{
+  transition: 0.5s;
+  background-color: var(--grey4);
 }
 
 button:focus{
@@ -204,11 +212,23 @@ button:focus{
   background-color: var(--mainc1);
 }
 
+.bg1:hover{
+  background-color: var(--mainc1);
+}
+
 .bg2{
   background-color: var(--grey1);
 }
 
+.bg2:hover{
+  background-color: var(--grey1);
+}
+
 .bg3{
+  background: var(--mainc2);
+}
+
+.bg3:hover{
   background: var(--mainc2);
 }
 
@@ -243,6 +263,12 @@ player{
   padding: 5px;
   border-radius: var(--radius);
   color: var(--grey3);
+  transition: 0.5s;
+}
+
+.refresh:hover{
+  background-color: var(--grey5);
+  transition: 0.5s;
 }
 
 button{
