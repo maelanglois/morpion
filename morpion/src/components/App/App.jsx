@@ -10,6 +10,7 @@ import Home from '../../pages/Home'
 import Ranking from '../../pages/Ranking'
 import Game from '../../pages/Game'
 import Player from '../../pages/Loginbot'
+import Threegame from '../../pages/Three'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
               <Route path="/botgame" element={<Botgame />} />
               <Route path="/login" element={<User />} />
               <Route path='/loginbot' element={<Player />} />
+              <Route path='/three-game' element={<Threegame />} />
           </Routes>
         </main>
       <Footer />

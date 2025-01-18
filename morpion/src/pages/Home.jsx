@@ -8,6 +8,7 @@ function Home() {
             <div className="select">
                 <Link to="/login">Classic tic-tac-toe</Link>
                 <Link to="/loginbot">Classic against bot</Link>
+                <Link to="/three-game">Three moves game</Link>
                 <a href="">Return to ongoing game</a>
             </div>
         </>
